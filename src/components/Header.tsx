@@ -31,8 +31,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-background/90 backdrop-blur-sm z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-xl font-bold text-foreground cursor-pointer">
-          Portfolio
+        <a
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="text-xl font-bold text-foreground cursor-pointer text-left flex-shrink-0"
+          style={{ minWidth: "max-content" }}
+        >
+          Vishwas Tiwari
         </a>
         
         {isMobile ? (
