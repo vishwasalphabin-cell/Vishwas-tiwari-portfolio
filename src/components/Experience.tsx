@@ -64,38 +64,39 @@ const Experience = () => {
                     {/* Header Section */}
                     <div className="flex flex-wrap justify-between items-start mb-6">
                       <div className="flex-1">
-                        <div className="flex items-center mb-3">
+                        <div className="flex items-start mb-3">
                            {/* Company Logo */}
-                           <div className="w-12 h-12 mr-4 flex items-center justify-center">
+                           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-3 sm:mr-4 flex items-center justify-center flex-shrink-0">
                              <img
                                src="\lovable-uploads\OIP.jpeg"
                                alt="Company Logo"
-                               className="w-12 h-12 object-cover rounded-full"
+                               className="w-full h-full object-cover rounded-full"
                              />
                            </div>
                           <div>
                             <h3 className="text-2xl font-bold text-gradient mb-1">{item.position}</h3>
-                            <div className="flex items-center text-lg font-medium text-foreground mb-1">
-                              <Building2 className="w-5 h-5 mr-2 text-primary" />
-                              {item.company}
-                            </div>
-                            <div className="flex items-center text-sm text-muted-foreground">
+                             <div className="flex items-center text-sm font-medium text-foreground mb-1">
+                               <Building2 className="w-5 h-5 mr-2 text-primary" />
+                               {item.company}
+                             </div>
+                            <div className="flex items-center text-muted-foreground" style={{fontSize: "16px" }}>
                               <MapPin className="w-4 h-4 mr-1" />
                               {item.location}
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="flex flex-col items-end space-y-2">
-                        <Badge variant={item.status === "Active" ? "default" : "secondary"} className="text-sm">
-                          {item.status}
-                        </Badge>
-                        <div className="flex items-center text-sm bg-gradient-to-r from-primary/20 to-blue-400/20 px-4 py-2 rounded-full border border-primary/30 font-medium">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {item.period}
-                        </div>
-                        
-                      </div>
+                       <div className="flex flex-col items-end space-y-2">
+                         <div className="flex items-center space-x-2">
+                           <Badge variant={item.status === "Active" ? "default" : "secondary"} className="text-sm">
+                             {item.status}
+                           </Badge>
+                           <div className="flex items-center text-sm bg-gradient-to-r from-primary/20 to-blue-400/20 px-4 py-2 rounded-full border border-primary/30 font-medium">
+                             <Calendar className="w-4 h-4 mr-2" />
+                             {item.period}
+                           </div>
+                         </div>
+                       </div>
                     </div>
                     
                      {/* Company Information */}
