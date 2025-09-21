@@ -69,21 +69,22 @@ const Skills = () => {
     { name: "Python", level: 90, icon: <Code className="w-5 h-5 text-primary" />, category: "Primary Language" },
     { name: "Java", level: 80, icon: <Coffee className="w-5 h-5 text-primary" />, category: "Object-Oriented" },
     { name: "HTML/CSS", level: 85, icon: <FileCode className="w-5 h-5 text-primary" />, category: "Web Development" },
-    { name: "JavaScript", level: 70, icon: <Globe className="w-5 h-5 text-primary" />, category: "Frontend" },
+    { name: "JavaScript", level: 40, icon: <Globe className="w-5 h-5 text-primary" />, category: "Frontend" },
   ];
 
   const dataScienceTools = [
     { name: "Pandas", level: 85, icon: <Database className="w-5 h-5 text-blue-400" />, category: "Data Manipulation" },
     { name: "NumPy", level: 85, icon: <BarChart className="w-5 h-5 text-blue-400" />, category: "Numerical Computing" },
-    { name: "Matplotlib", level: 80, icon: <LineChart className="w-5 h-5 text-blue-400" />, category: "Data Visualization" },
-    { name: "Seaborn", level: 75, icon: <Palette className="w-5 h-5 text-blue-400" />, category: "Statistical Visualization" },
+    { name: "Matplotlib", level: 70, icon: <LineChart className="w-5 h-5 text-blue-400" />, category: "Data Visualization" },
+    { name: "Seaborn", level: 55, icon: <Palette className="w-5 h-5 text-blue-400" />, category: "Statistical Visualization" },
   ];
 
   const developmentTools = [
-    { name: "Git & GitHub", level: 80, icon: <GitBranch className="w-5 h-5 text-purple-400" />, category: "Version Control" },
+    { name: "Git & GitHub", level: 70, icon: <GitBranch className="w-5 h-5 text-purple-400" />, category: "Version Control" },
     { name: "VS Code", level: 90, icon: <Terminal className="w-5 h-5 text-purple-400" />, category: "IDE" },
     { name: "Jupyter Notebooks", level: 85, icon: <BookOpen className="w-5 h-5 text-purple-400" />, category: "Data Analysis" },
-    { name: "Postman", level: 70, icon: <Zap className="w-5 h-5 text-purple-400" />, category: "API Testing" },
+    { name: "Postman", level: 50, icon: <Zap className="w-5 h-5 text-purple-400" />, category: "API Testing" },
+    { name: "Google colab", level: 70, icon: <Zap className="w-5 h-5 text-purple-400" />, category: "Machine Learning" },
   ];
 
   const officeSkills = [
@@ -91,6 +92,10 @@ const Skills = () => {
     { name: "MS Word", level: 90, icon: <FileText className="w-5 h-5 text-orange-400" />, category: "Documentation" },
     { name: "MS PowerPoint", level: 85, icon: <FileImage className="w-5 h-5 text-orange-400" />, category: "Presentations" },
     { name: "Google Workspace", level: 80, icon: <Cloud className="w-5 h-5 text-orange-400" />, category: "Cloud Tools" },
+  ];
+
+  const databaseSkills = [
+    { name: "MySQL", level: 80, icon: <Database className="w-5 h-5 text-green-400" />, category: "Relational Database" },
   ];
 
   const softSkills = [
@@ -169,8 +174,21 @@ const Skills = () => {
             </CardContent>
           </Card>
 
-          {/* Soft Skills */}
+          {/* Database Skills */}
           <Card className="card-hover glass-effect floating-animation" style={{ animationDelay: '2s' }}>
+            <CardContent className="p-8">
+              <div className="flex items-center mb-6">
+                <div className="w-2 h-8 bg-gradient-to-b from-green-400 to-emerald-500 rounded-full mr-4"></div>
+                <h3 className="text-xl font-semibold text-gradient">Database Skills</h3>
+              </div>
+              {databaseSkills.map((skill, index) => (
+                <SkillItem key={index} name={skill.name} level={skill.level} icon={skill.icon} category={skill.category} />
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Soft Skills */}
+          <Card className="card-hover glass-effect floating-animation" style={{ animationDelay: '2.5s' }}>
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
                 <div className="w-2 h-8 bg-gradient-to-b from-cyan-400 to-teal-500 rounded-full mr-4"></div>
@@ -188,7 +206,7 @@ const Skills = () => {
           <Card className="card-hover glass-effect">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-gradient mb-4">Skills Overview</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-2">4+</div>
                   <div className="text-sm text-muted-foreground">Programming Languages</div>
@@ -200,6 +218,10 @@ const Skills = () => {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">4+</div>
                   <div className="text-sm text-muted-foreground">Development Tools</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">1+</div>
+                  <div className="text-sm text-muted-foreground">Database Skills</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">4+</div>
