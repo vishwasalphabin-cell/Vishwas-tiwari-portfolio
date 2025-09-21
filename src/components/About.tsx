@@ -59,7 +59,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-gradient">Personal Profile</h3>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A passionate data science enthusiast with a strong foundation in analytical thinking and 
+                A passionate AI enthusiast with a strong foundation in analytical thinking and 
                 problem-solving. My journey in data science is driven by curiosity and the desire to extract 
                 meaningful insights from complex datasets. I specialize in machine learning algorithms, 
                 statistical analysis, and data visualization techniques.

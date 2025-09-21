@@ -15,7 +15,7 @@ const Footer = () => {
               Vishwas<span className="text-primary"> Tiwari</span>
             </p>
             <p className="text-muted-foreground">
-              Data Science Enthusiast & Developer
+              AI Enthusiast & Developer
             </p>
             <div className="flex items-center justify-center md:justify-start mt-2 text-sm text-muted-foreground">
               <Sparkles className="w-4 h-4 mr-1 text-primary" />

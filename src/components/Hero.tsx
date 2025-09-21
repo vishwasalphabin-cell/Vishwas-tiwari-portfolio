@@ -55,7 +55,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-primary font-semibold mb-4">
-            Data Science Enthusiast & Developer
+            AI Enthusiast & Developer
           </div>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
