@@ -5,7 +5,7 @@ import { Calendar, MapPin, Code, Database, Brain, TrendingUp, Award, Target } fr
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative bg-gradient overflow-hidden">
+    <section id="about" className="relative bg-gradient overflow-hidden">
       {/* Floating particles animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-ping"></div>
@@ -14,7 +14,9 @@ const About = () => {
       </div>
       
       <div className="section-container">
-        <h2 className="section-title">About Me</h2>
+        <div className="text-center mb-12">
+          <h2 className="section-title">About Me</h2>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-10">
           {/* Profile Photo Card */}
@@ -22,7 +24,7 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-blue-400/10"></div>
             <CardContent className="p-6 text-center relative z-10">
               <div className="relative mb-4 inline-block">
-                <div className="w-32 h-40 mx-auto rounded-xl bg-gradient-to-br from-primary to-blue-400 p-1">
+                <div className="w-32 h-39 mx-auto rounded-xl bg-gradient-to-br from-primary to-blue-400 p-1">
                   <div className="w-full h-full rounded-lg overflow-hidden bg-card">
                     <img 
                       src="\lovable-uploads\Profile Imag.jpg" 
@@ -31,10 +33,9 @@ const About = () => {
                     />
                   </div>
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-card animate-pulse"></div>
               </div>
               <h3 className="text-xl font-bold text-gradient mb-2">Vishwas Tiwari</h3>
-              <p className="text-primary font-medium mb-4">Data Science Enthusiast</p>
+              <p className="text-primary font-medium mb-4">AI engineer enthusiast</p>
               <div className="flex justify-center space-x-2">
                 <div className="p-2 bg-primary/10 rounded-full">
                   <Database className="w-4 h-4 text-primary" />
@@ -58,15 +59,15 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-gradient">Personal Profile</h3>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                I'm a passionate data science enthusiast with a strong foundation in analytical thinking and 
+                A passionate data science enthusiast with a strong foundation in analytical thinking and 
                 problem-solving. My journey in data science is driven by curiosity and the desire to extract 
                 meaningful insights from complex datasets. I specialize in machine learning algorithms, 
                 statistical analysis, and data visualization techniques.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Currently pursuing my Bachelor's degree in Computer Applications (BCA) at 
-                Bhagwan Mahavir University, I'm actively building expertise in programming, 
-                data structures, and advanced analytics. My academic journey is complemented 
+                Currently pursuing Bachelor's degree in Computer Applications (BCA) at 
+                Bhagwan Mahavir University, actively building expertise in programming, 
+                data science, and advanced analytics. My academic journey is complemented 
                 by hands-on projects that demonstrate real-world applications of data science.
               </p>
               
@@ -93,39 +94,37 @@ const About = () => {
                 <h3 className="text-lg font-semibold text-gradient">Contact Info</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-4 mb-4">
                 <div className="group">
-                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-secondary/30 group-hover:bg-blue-400/10 transition-colors">
+                  <div className="flex items-center space-x-3 rounded-lg p-1 bg-secondary/30 group-hover:bg-blue-400/10 transition-colors">
                     <div className="bg-blue-400/20 p-2 rounded-full">
                       <Calendar className="w-4 h-4 text-blue-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Date of Birth</p>
-                      <p className="font-medium text-sm">13/04/2005</p>
+                      <p className="text-xs text-muted-foreground" style={{ fontSize: "15px" }}>Date of Birth</p>
+                      <p className="font-medium text-sm" style={{ fontSize: "13px" }}>13/04/2005</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="group">
-                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-secondary/30 group-hover:bg-cyan-400/10 transition-colors">
+                  <div className="flex items-center space-x-3 rounded-lg p-1 bg-secondary/30 group-hover:bg-cyan-400/10 transition-colors">
                     <div className="bg-cyan-400/20 p-2 rounded-full">
                       <MapPin className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Phone</p>
-                      <p className="font-medium text-sm">+91 7984527433</p>
+                      <p className="text-xs text-muted-foreground" style={{ fontSize: "15px" }}>Email</p>
+                      <p
+                        className="font-medium text-sm break-all"
+                        style={{ fontSize: "13px", wordBreak: "break-all" }}
+                      >
+                        vishwastiwari1901@gmail.com
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Status Indicator */}
-              <div className="mt-6 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-green-400 font-medium">Available for opportunities</span>
-                </div>
-              </div>
+
             </CardContent>
           </Card>
         </div>
@@ -146,5 +145,4 @@ const About = () => {
     </section>
   );
 };
-
 export default About;

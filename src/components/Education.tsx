@@ -10,12 +10,12 @@ const Education = () => {
       degree: "Bachelor in Computer Applications (BCA)",
       institution: "Bhagwan Mahavir University",
       period: "2023-26",
-      grade: "4th Semester",
-      cgpa: "7.64",
+      grade: "5th Semester",
+      cgpa: "7.76",
       location: "Surat, Gujarat",
       details: "Currently pursuing a comprehensive bachelor's degree in Computer Applications with focus on programming fundamentals, data structures, algorithms, and software development methodologies.",
       achievements: [
-        "Maintaining strong academic performance with CGPA of 7.64",
+        "Maintaining strong academic performance with CGPA of 7.76",
         "Active participation in coding competitions and hackathons",
         "Completed core courses in Database Management, Web Development, and Object-Oriented Programming",
         "Working on capstone projects integrating multiple technologies"
@@ -60,7 +60,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 relative bg-gradient overflow-hidden">
+    <section id="education" className="relative bg-gradient overflow-hidden">
       {/* Floating particles animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-ping"></div>
@@ -69,11 +69,13 @@ const Education = () => {
       </div>
 
       <div className="section-container">
-        <h2 className="section-title">Education Journey</h2>
-        <p className="text-muted-foreground text-lg mb-12 max-w-3xl text-center mx-auto">
-          My academic path has been a continuous journey of learning and growth, 
-          building a strong foundation in both theoretical knowledge and practical skills
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="section-title">Education Journey</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            My academic path has been a continuous journey of learning and growth, 
+            building a strong foundation in both theoretical knowledge and practical skills
+          </p>
+        </div>
         
         <div className="mt-12">
           <div className="relative border-l-2 border-gradient-to-b from-primary via-blue-400 to-cyan-400 pl-8 ml-4">

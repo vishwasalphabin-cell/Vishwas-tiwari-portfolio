@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center relative z-10">
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <p className="text-2xl font-bold text-gradient mb-2">
-              Vishwas<span className="text-primary">.</span>
+              Vishwas<span className="text-primary"> Tiwari</span>
             </p>
             <p className="text-muted-foreground">
               Data Science Enthusiast & Developer

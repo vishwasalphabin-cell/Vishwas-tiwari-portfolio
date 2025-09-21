@@ -14,12 +14,14 @@ const Contact = () => {
   const githubUrl = "https://github.com/Vishhhfr";
 
   return (
-    <section id="contact" className="py-20 relative bg-gradient overflow-hidden">
+    <section id="contact" className="relative bg-gradient overflow-hidden">
       <div className="section-container">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="text-muted-foreground text-lg mb-12 max-w-2xl text-center mx-auto">
-          Let's connect and discuss opportunities. I'm always open to new challenges and collaborations.
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Let's connect and discuss opportunities. I'm always open to new challenges and collaborations.
+          </p>
+        </div>
         
         <div className="mx-auto max-w-6xl">
           <Card className="card-hover glass-effect pulse-glow">
@@ -27,7 +29,7 @@ const Contact = () => {
               <h3 className="text-3xl font-semibold mb-12 text-center text-gradient">Contact Information</h3>
               
               {/* Main Contact Info */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 align-items-end">
                 <div className="flex flex-col items-center space-y-6 group">
                   <div className="bg-gradient-to-br from-primary to-blue-400 p-6 rounded-3xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
                     <Mail className="w-8 h-8 text-white" />
@@ -43,23 +45,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex flex-col items-center space-y-6 group">
-                  <div className="bg-gradient-to-br from-green-400 to-emerald-500 p-6 rounded-3xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <Phone className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground uppercase tracking-wider mb-3 font-medium">Phone</p>
-                    <a 
-                      href={callUrl} 
-                      className="font-semibold hover:text-primary transition-colors duration-300 text-lg block"
-                      aria-label="Call Vishwas"
-                    >
-                      +91 7984527433
-                    </a>
-                  </div>
-                </div>
-                
+              
                 <div className="flex flex-col items-center space-y-6 group">
                   <div className="bg-gradient-to-br from-purple-400 to-pink-500 p-6 rounded-3xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
                     <MapPin className="w-8 h-8 text-white" />

@@ -24,7 +24,8 @@ import {
   Layers,
   Terminal,
   Smartphone,
-  Monitor
+  Monitor,
+  OmegaIcon
 } from 'lucide-react';
 
 interface SkillProps {
@@ -84,7 +85,8 @@ const Skills = () => {
     { name: "VS Code", level: 90, icon: <Terminal className="w-5 h-5 text-purple-400" />, category: "IDE" },
     { name: "Jupyter Notebooks", level: 85, icon: <BookOpen className="w-5 h-5 text-purple-400" />, category: "Data Analysis" },
     { name: "Postman", level: 50, icon: <Zap className="w-5 h-5 text-purple-400" />, category: "API Testing" },
-    { name: "Google colab", level: 70, icon: <Zap className="w-5 h-5 text-purple-400" />, category: "Machine Learning" },
+    { name: "Google colab", level: 70, icon: <OmegaIcon className="w-5 h-5 text-purple-400" />, category: "Machine Learning" },
+    { name: "Cursor", level: 90, icon: <Terminal className="w-5 h-5 text-purple-400" />, category: "AI Code Editor" },
   ];
 
   const officeSkills = [
@@ -99,14 +101,15 @@ const Skills = () => {
   ];
 
   const softSkills = [
-    { name: "Problem Solving", level: 85, icon: <Cpu className="w-5 h-5 text-cyan-400" />, category: "Analytical" },
+    { name: "Problem Solving", level: 85, icon: <Cloud className="w-5 h-5 text-cyan-400" />, category: "Analytical" },
     { name: "Insights", level: 80, icon: <BarChart className="w-5 h-5 text-cyan-400" />, category: "Research" },
     { name: "Communication", level: 75, icon: <Globe className="w-5 h-5 text-cyan-400" />, category: "Interpersonal" },
     { name: "Team Collaboration", level: 80, icon: <GitBranch className="w-5 h-5 text-cyan-400" />, category: "Leadership" },
+    { name: "Leveraging AI", level: 85, icon: <Cpu className="w-5 h-5 text-cyan-400" />, category: "AI implementation" },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient relative overflow-hidden">
+    <section id="skills" className="bg-gradient relative overflow-hidden">
       {/* Floating particles animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-ping"></div>
@@ -115,11 +118,13 @@ const Skills = () => {
       </div>
 
       <div className="section-container">
-        <h2 className="section-title">Technical Expertise</h2>
-        <p className="text-muted-foreground text-lg mb-12 max-w-3xl text-center mx-auto">
-          A comprehensive collection of my technical skills, tools, and competencies 
-          that enable me to deliver innovative solutions and drive data-informed decisions
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="section-title">Technical Expertise</h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            A comprehensive collection of my technical skills, tools, and competencies 
+            that enable me to deliver innovative solutions and drive data-informed decisions
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {/* Programming Languages */}

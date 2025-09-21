@@ -70,7 +70,7 @@
 
   .section-title::after {
     content: "";
-    @apply block h-1 bg-gradient-to-r from-primary via-blue-400 to-cyan-400 w-1/2 mt-2 rounded-full;
+    @apply block h-1 bg-gradient-to-r from-primary via-blue-400 to-cyan-400 w-full mt-2 rounded-full;
     box-shadow: 0 0 10px hsl(217, 91%, 60%);
   }
 

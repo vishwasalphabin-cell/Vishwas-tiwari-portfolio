@@ -115,7 +115,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient relative overflow-hidden">
+    <section id="projects" className="bg-gradient relative overflow-hidden">
       {/* Enhanced background animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
