@@ -22,10 +22,10 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-blue-400/10"></div>
             <CardContent className="p-6 text-center relative z-10">
               <div className="relative mb-4 inline-block">
-                <div className="w-32 h-40 mx-auto rounded-xl bg-gradient-to-br from-primary to-blue-400 p-1 animate-pulse">
+                <div className="w-32 h-40 mx-auto rounded-xl bg-gradient-to-br from-primary to-blue-400 p-1">
                   <div className="w-full h-full rounded-lg overflow-hidden bg-card">
                     <img 
-                      src="/lovable-uploads/347a26ab-5512-475f-8034-640748027430.png" 
+                      src="C:\Users\Vishwas\Pictures\Saved Pictures\Profile Imag.jpg" 
                       alt="Vishwas Tiwari"
                       className="w-full h-full object-contain"
                     />

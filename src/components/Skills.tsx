@@ -100,7 +100,7 @@ const Skills = () => {
 
   const softSkills = [
     { name: "Problem Solving", level: 85, icon: <Cpu className="w-5 h-5 text-cyan-400" />, category: "Analytical" },
-    { name: "Data Analysis", level: 80, icon: <BarChart className="w-5 h-5 text-cyan-400" />, category: "Research" },
+    { name: "Insights", level: 80, icon: <BarChart className="w-5 h-5 text-cyan-400" />, category: "Research" },
     { name: "Communication", level: 75, icon: <Globe className="w-5 h-5 text-cyan-400" />, category: "Interpersonal" },
     { name: "Team Collaboration", level: 80, icon: <GitBranch className="w-5 h-5 text-cyan-400" />, category: "Leadership" },
   ];
