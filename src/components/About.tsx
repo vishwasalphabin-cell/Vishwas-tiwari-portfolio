@@ -25,7 +25,7 @@ const About = () => {
                 <div className="w-32 h-40 mx-auto rounded-xl bg-gradient-to-br from-primary to-blue-400 p-1">
                   <div className="w-full h-full rounded-lg overflow-hidden bg-card">
                     <img 
-                      src="C:\Users\Vishwas\Pictures\Saved Pictures\Profile Imag.jpg" 
+                      src="\lovable-uploads\Profile Imag.jpg" 
                       alt="Vishwas Tiwari"
                       className="w-full h-full object-contain"
                     />
