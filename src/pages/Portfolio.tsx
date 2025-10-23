@@ -42,9 +42,15 @@ const ProjectCard = ({ title, description, tags, imageUrl, icon, category, accur
         </div>
       </div>
       
-      <CardContent className="p-6 flex-grow">
-        <h3 className="text-xl font-semibold mb-2 text-gradient">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+       <CardContent className="p-6 flex-grow">
+         <h3 className="text-xl font-semibold mb-2 text-gradient">{title}</h3>
+         <div className="text-muted-foreground mb-4">
+           {description.split('\n').map((line, index) => (
+             <div key={index} className="mb-1" style={{ marginBottom: '4px' }}>
+               {line}
+             </div>
+           ))}
+         </div>
         
         {/* Performance metrics for ML projects */}
         {(accuracy || dataset || iterations) && (
@@ -88,19 +94,19 @@ const Portfolio = () => {
   const navigate = useNavigate();
 
   const machineLearningProjects = [
-    {
-      title: "Will help you find a computer",
-      description: "A machine learning regression model that accurately predicts computer prices based on comprehensive hardware specifications including RAM capacity, GPU model, processor type, brand, storage size, and other technical features. This project involved extensive data preprocessing, feature engineering, and model optimization using multiple regression algorithms. Trained on a massive dataset of 80,000+ computer configurations from various manufacturers and price ranges, the model achieved 83% accuracy in price prediction. The system can help both consumers make informed purchasing decisions and retailers optimize their pricing strategies. Features include real-time price prediction, confidence intervals, and detailed breakdown of how each specification affects the final price.",
-      tags: ["Python", "Machine Learning", "Regression", "Scikit-Learn", "Pandas", "NumPy"],
-      imageUrl: "Project-Covers/3.1.png",
-      icon: <Brain className="w-5 h-5 text-primary" />,
-      category: "Machine Learning",
-      accuracy: "83%",
-      dataset: "80k samples"
-    },
+     {
+       title: "Will help you find a computer",
+       description: "• Machine learning regression model for accurate computer price prediction\n• Analyzes comprehensive hardware specs: RAM, GPU, processor, brand, storage\n• Extensive data preprocessing and feature engineering with multiple algorithms\n• Trained on 80,000+ computer configurations from various manufacturers\n• Achieved 83% accuracy in price prediction\n• Real-time price prediction with confidence intervals\n• Detailed breakdown of how each specification affects final price\n• Helps consumers make informed decisions and retailers optimize pricing\n• Supports multiple regression algorithms and model optimization",
+       tags: ["Python", "Machine Learning", "Regression", "Scikit-Learn", "Pandas", "NumPy"],
+       imageUrl: "Project-Covers/3.1.png",
+       icon: <Brain className="w-5 h-5 text-primary" />,
+       category: "Machine Learning",
+       accuracy: "83%",
+       dataset: "80k samples"
+     },
     {
       title: "Neural Network: How it works!",
-      description: "A comprehensive implementation of a 3-layer neural network built entirely from scratch using only Python, NumPy for mathematical operations, and Pandas for data handling. This project demonstrates deep understanding of neural network fundamentals including forward propagation, backpropagation, gradient descent, and activation functions. The network successfully classifies handwritten digits (0-9) from the MNIST dataset with 85% accuracy after 980 training iterations. Key features include custom implementation of sigmoid activation function, mean squared error loss calculation, and adaptive learning rate optimization. The project showcases advanced mathematical concepts including calculus, linear algebra, and optimization algorithms, making it an excellent demonstration of machine learning theory applied in practice without relying on high-level frameworks.",
+      description: "• 3-layer neural network built from scratch using only Python, NumPy, and Pandas\n• Implements forward propagation, backpropagation, and gradient descent algorithms\n• Custom sigmoid activation function and mean squared error loss calculation\n• Classifies handwritten digits (0-9) from MNIST dataset with 85% accuracy\n• 980 training iterations with adaptive learning rate optimization\n• Deep understanding of neural network fundamentals and mathematical concepts\n•Calculus, linear algebra, and optimization algorithms\n• No reliance on high-level frameworks - pure mathematical implementation\n• Excellent demonstration of machine learning theory in practice",
       tags: ["Python", "Neural Networks", "NumPy", "Pandas", "Deep Learning", "Calculus", "Linear Algebra", "Machine Learning"],
       imageUrl: "Project-Covers/NNFS.png",
       icon: <Brain className="w-5 h-5 text-blue-400" />,
@@ -110,7 +116,7 @@ const Portfolio = () => {
     },
     {
       title: "What's this flower?",
-      description: "A machine learning classification model designed to accurately identify flower species based on botanical measurements including petal length, petal width, sepal length, and sepal width. This project demonstrates expertise in feature engineering, data preprocessing, and supervised learning techniques for biological data analysis. The model achieved 93% accuracy using ensemble methods and advanced classification algorithms. Key features include comprehensive data visualization of flower characteristics, feature importance analysis, and cross-validation techniques. The system can classify multiple flower species with high confidence and provides detailed probability scores for each prediction. This project showcases practical application of machine learning in botanical research and environmental studies, making it valuable for researchers, botanists, and educational purposes.",
+      description: "• Machine learning classification model for flower species identification\n• Analyzes botanical measurements: petal length/width, sepal length/width\n• Expertise in feature engineering and data preprocessing techniques\n• Achieved 93% accuracy using ensemble methods and algorithms\n• Comprehensive data visualization of flower characteristics\n• Feature importance analysis and cross-validation techniques\n• Classifies multiple flower species with high confidence\n• Detailed probability scores for each prediction\n• Practical application in botanical research and environmental studies\n• Valuable for researchers, botanists, and educational purposes",
       tags: ["Python", "Pandas", "Numpy" , "Classification", "Scikit-Learn", "Data Science", "Feature Engineering"],
       imageUrl: "Project-Covers/random forrest.png",
       icon: <Brain className="w-5 h-5 text-green-400" />,
@@ -120,7 +126,7 @@ const Portfolio = () => {
     },
     {
       title: "Titanic: Why did they sink?",
-      description: "A comprehensive machine learning regression model that predicts passenger survival on the Titanic using demographic information, ticket details, and family relationships. This project demonstrates advanced data analysis skills including missing value imputation, feature engineering, and data visualization. The model analyzes factors such as passenger class, age, gender, fare paid, cabin location, and family size to determine survival probability. Implemented using both traditional machine learning algorithms and deep learning approaches with TensorFlow. The project includes extensive exploratory data analysis with statistical visualizations, correlation analysis, and survival pattern identification. Key features include data preprocessing pipelines, feature selection techniques, handling categorical data and model performance evaluation. This project showcases practical application of machine learning in historical data analysis and provides insights into the factors that influenced survival rates during the tragic event.",
+      description: "• Machine learning classification model for Titanic passenger survival prediction\n• Analyzes demographic info, ticket details, and family relationships\n• Data analysis: missing value imputation, feature engineering\n• Factors: passenger class, age, gender, fare, cabin location, family size\n• Traditional ML algorithms and deep learning with TensorFlow/scikit-learn\n• Extensive exploratory data analysis with statistical visualizations\n• Correlation analysis and survival pattern identification\n• Data preprocessing pipelines and feature selection techniques\n• Model evaluation with confusion matrices and ROC curves\n• Insights into factors influencing survival rates during the tragic event",
       tags: ["Python", "Pandas", "Numpy" , "Matplotlib", "Machine Learning", "Data Analysis", "TensorFlow"],
       imageUrl: "Project-Covers/titanic.jpg",
       icon: <Brain className="w-5 h-5 text-purple-400" />,
@@ -133,7 +139,7 @@ const Portfolio = () => {
   const dataAnalyticsProjects = [
     {
       title: "Super Store's Superb Analytics",
-      description: "A comprehensive end-to-end business intelligence analysis of a superstore's extensive billing dataset spanning multiple years and regions. This project involved deep-dive exploration of sales patterns, customer purchasing behavior, product performance metrics, and regional market trends. Utilized advanced statistical analysis techniques including time series analysis, correlation analysis, and customer lifetime value calculations. Key deliverables include identification of top-performing product categories, seasonal sales variations, customer segmentation strategies, and regional performance comparisons. The analysis revealed critical insights for inventory management optimization, pricing strategies, and targeted marketing campaigns. Features comprehensive data visualization dashboards with interactive charts, heatmaps, and trend analysis. The project demonstrates expertise in data cleaning, feature engineering, statistical modeling, and business intelligence reporting, providing actionable recommendations that can drive significant revenue growth and operational efficiency improvements.",
+      description: "• Comprehensive business intelligence analysis of superstore billing dataset\n• Multi-year and multi-regional data spanning extensive time periods\n• Deep-dive exploration of sales patterns and customer purchasing behavior\n• Product performance metrics and regional market trend analysis\n•Statistical techniques: time series, cohort analysis, CLV calculations\n• Identification of top-performing product categories and seasonal variations\n• Customer segmentation strategies and regional performance comparisons\n• Critical insights for inventory management and pricing optimization\n• Interactive data visualization dashboards with charts and heatmaps\n• Actionable recommendations for revenue growth and operational efficiency",
       tags: ["Python", "Data Analytics", "Business Intelligence", "Pandas", "Seaborn", "Statistical Analysis", "Exploratory Data Analysis"],
       imageUrl: "Project-Covers/store.png",
       icon: <TrendingUp className="w-5 h-5 text-green-400" />,
@@ -141,7 +147,7 @@ const Portfolio = () => {
     },
     {
       title: "Mouth watering analytics",
-      description: "A comprehensive data analytics project focused on analyzing a café's complete billing dataset to extract actionable business insights and optimize operations. This project involved detailed examination of menu item performance, customer ordering patterns, peak hours analysis, and revenue optimization opportunities. Key analyses include identification of top-selling menu items, profit margin analysis by category, customer behavior segmentation, and seasonal trend identification. The project features advanced data visualization techniques including interactive dashboards, sales heatmaps, and customer journey mapping. Utilized statistical methods such as correlation analysis, regression modeling, and A/B testing frameworks to validate business hypotheses. The analysis provided specific recommendations for menu optimization, pricing strategies, staff scheduling, and marketing campaigns. This project demonstrates expertise in food service analytics, customer behavior analysis, and data-driven decision making in the hospitality industry.",
+      description: "• Comprehensive data analytics project for café billing dataset analysis\n• Detailed examination of menu item performance and customer ordering patterns\n• Peak hours analysis and revenue optimization opportunities\n• Identification of top-selling menu items and profit margin analysis by category\n• Customer behavior segmentation and seasonal trend identification\n•Data visualization: interactive dashboards and sales heatmaps\n• Customer journey mapping and behavior pattern analysis\n• Statistical methods: correlation analysis, regression modeling, A/B testing\n• Specific recommendations for menu optimization and pricing strategies\n• Staff scheduling and marketing campaign optimization insights\n• Expertise in food service analytics and hospitality industry applications",
       tags: ["Python", "Data Analysis", "Pandas", "Matplotlib", "Business Intelligence", "Seaborn", "Exploratory Data Analysis"],
       imageUrl: "Project-Covers/cafe.png",
       icon: <BarChart3 className="w-5 h-5 text-green-400" />,
@@ -152,7 +158,7 @@ const Portfolio = () => {
   const webDevelopmentProjects = [
     {
       title: "Whatvever I built, is here",
-      description: "A comprehensive, modern portfolio website built with cutting-edge web technologies including React, TypeScript, and Tailwind CSS. This project showcases advanced frontend development skills with responsive design, interactive animations, and optimized performance across all devices. Features include dynamic content management, smooth scrolling navigation, interactive project galleries, and real-time animations. The website demonstrates expertise in modern web development practices including component-based architecture, state management, responsive design principles, and performance optimization techniques. Key features include mobile-first design approach, accessibility compliance, SEO optimization, and cross-browser compatibility. The project also includes advanced UI/UX design elements such as gradient backgrounds, hover effects, loading animations, and interactive elements that enhance user engagement. This portfolio serves as a living demonstration of technical skills and creative design capabilities in modern web development.",
+      description: "• Modern portfolio website built with React, TypeScript, and Tailwind CSS\n• Frontend with responsive design and animations\n• Dynamic content management and smooth scrolling navigation\n• Interactive project galleries and real-time animations\n• Component-based architecture and state management\n• Mobile-first design approach and accessibility compliance\n• SEO optimization and cross-browser compatibility\n• Advanced UI/UX elements: gradients, hover effects, loading animations\n• Performance optimization techniques and modern web practices\n• Living demonstration of technical skills and creative design",
       tags: ["React", "TypeScript", "Tailwind CSS", "Responsive Design", "Modern UI"],
       imageUrl: "Project-Covers/port.webp",
       icon: <Globe className="w-5 h-5 text-purple-400" />,
@@ -160,7 +166,7 @@ const Portfolio = () => {
     },
     {
       title: "Travel with me",
-      description: "A comprehensive travel agency website designed and developed for Happy Holidays, featuring a complete booking and information system. This project showcases full-stack web development skills with responsive design, interactive features, and user-friendly interface. Key features include dynamic tour listings with filtering and search capabilities, interactive image galleries with lightbox functionality, online enquiry forms with validation, real-time availability checking, and integrated booking system. The website demonstrates expertise in frontend technologies including HTML5, CSS3, JavaScript ES6+, and responsive design principles. Additional features include mobile-first design approach, cross-browser compatibility, SEO optimization, and accessibility compliance. The project includes advanced UI/UX elements such as smooth animations, interactive maps, customer testimonials section, and social media integration. This website serves as a complete digital solution for travel agencies, providing customers with an intuitive and engaging booking experience while showcasing destinations effectively.",
+      description: "• Comprehensive travel agency website for Happy Holidays\n• Complete booking and information system with responsive design\n• Dynamic tour listings with filtering and search capabilities\n• Interactive image galleries with lightbox functionality\n• Online enquiry forms with validation and real-time availability\n• Frontend technologies: HTML5, CSS3, JavaScript ES6+\n• Mobile-first design and cross-browser compatibility\n• SEO optimization and accessibility compliance\n• Advanced UI/UX: smooth animations, interactive maps\n• Customer testimonials and social media integration\n• Complete digital solution for travel agencies",
       tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"],
       imageUrl: "Project-Covers/travel.jpg",
       icon: <Globe className="w-5 h-5 text-purple-400" />,
@@ -171,7 +177,7 @@ const Portfolio = () => {
   const extraProjects = [
     {
       title: "Send emails with ease",
-      description: "Email Sender Pro is a comprehensive email automation application built with Python, featuring an intuitive graphical user interface for managing both bulk and individual email campaigns. This project demonstrates expertise in GUI development, email protocols, and automation workflows. Key features include advanced email template management, recipient list segmentation, scheduling capabilities, and real-time progress tracking with detailed analytics. The application supports multiple email providers, HTML and plain text formatting, attachment handling, and personalized email content. Additional capabilities include email validation, bounce handling, delivery status tracking, and comprehensive reporting dashboards. The project showcases advanced Python programming skills including object-oriented design, database integration, threading for concurrent operations, and error handling. This tool is particularly valuable for marketing professionals, small businesses, and organizations that need to manage large-scale email communications efficiently while maintaining deliverability and compliance standards.",
+      description: "• Email Sender Pro - comprehensive email automation application\n• Intuitive GUI for managing bulk and individual email campaigns\n• Email template management and recipient list segmentation\n• Scheduling capabilities and real-time progress tracking\n• Support for multiple email providers and HTML/plain text formatting\n• Attachment handling and personalized email content\n• Email validation, bounce handling, and delivery status tracking\n• Comprehensive reporting dashboards and analytics\n• Object-oriented design and database integration\n• Threading for concurrent operations and error handling\n• Valuable for marketing professionals and small businesses",
       tags: ["Python", "Email Automation", "GUI", "Bulk Emails", "Progress Tracking"],
       imageUrl: "Project-Covers/Email sender pro.jpg",
       icon: <Mail className="w-5 h-5 text-primary" />,
@@ -179,7 +185,7 @@ const Portfolio = () => {
     },
     {
       title: "AI ChatBot(Using Gemini API)",
-      description: "An advanced AI-powered chatbot application built using Google's Gemini API, featuring intelligent conversation capabilities and a modern web interface. This project demonstrates expertise in AI integration, natural language processing, and modern web application development. Key features include real-time conversation handling, context-aware responses, conversation history management, and streaming response capabilities for enhanced user experience. The application features a clean, intuitive Streamlit interface with real-time chat functionality, message threading, and conversation export options. Advanced capabilities include sentiment analysis, response customization, conversation analytics, and multi-turn dialogue management. The project showcases proficiency in API integration, asynchronous programming, data persistence, and user interface design. Additional features include conversation search functionality, response rating system, and integration with external data sources for enhanced context. This chatbot serves as a practical demonstration of modern AI application development and can be adapted for customer service, educational purposes, or general conversational AI applications.",
+      description: "• An AI-powered chatbot using Google's Gemini API\n• Conversation capabilities and modern web interface\n• Real-time conversation handling and context-aware responses\n• Conversation history management and streaming response capabilities\n• Clean Streamlit interface with real-time chat functionality\n• Message threading and conversation export options\n• Sentiment analysis and response customization features\n• Conversation analytics and multi-turn dialogue management\n• API integration and asynchronous programming\n• Data persistence and user interface design\n• Adaptable for customer service and educational purposes",
       tags: ["Python", "AI", "Gemini API", "Streamlit"],
       imageUrl: "Project-Covers/chatbot.avif",
       icon: <Brain className="w-5 h-5 text-blue-400" />,
